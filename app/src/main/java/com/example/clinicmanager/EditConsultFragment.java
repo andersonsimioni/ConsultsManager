@@ -104,7 +104,6 @@ public class EditConsultFragment extends Fragment {
                             @RequiresApi(api = Build.VERSION_CODES.O)
                             @Override
                             public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                                String datetime = dayOfMonth + "/" + month + "/" + year + " " + hourOfDay + ":" + minute;
                                 initDatetimeToSave = LocalDateTime.of(year,month,dayOfMonth,hourOfDay,minute);
                             }
                         }, finalStartHour, finalStartMinute, DateFormat.is24HourFormat(view.getContext()));
@@ -148,7 +147,6 @@ public class EditConsultFragment extends Fragment {
                             @RequiresApi(api = Build.VERSION_CODES.O)
                             @Override
                             public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                                String datetime = dayOfMonth + "/" + month + "/" + year + " " + hourOfDay + ":" + minute;
                                 endDatetimeToSave = LocalDateTime.of(year,month,dayOfMonth,hourOfDay,minute);
                             }
                         }, finalStartHour, finalStartMinute, DateFormat.is24HourFormat(view.getContext()));
