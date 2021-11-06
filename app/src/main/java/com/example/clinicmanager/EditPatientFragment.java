@@ -115,9 +115,11 @@ public class EditPatientFragment extends Fragment {
 
         if(m!=null){
             ((TextView)view.findViewById(R.id.patientName)).setText(m.getName());
-            //((TextView)view.findViewById(R.id.medicCRM)).setText(m.get());
             ((TextView)view.findViewById(R.id.patientPhone)).setText(m.getPhone());
             ((TextView)view.findViewById(R.id.patientFixPhone)).setText(m.getFix_phone());
+            Spinner bloodSpinner = ((Spinner)view.findViewById(R.id.patientGrpBlood));
+            if(m.isGrp_blood() == false)
+                bloodSpinner.setSelection(1);
         }
     }
 

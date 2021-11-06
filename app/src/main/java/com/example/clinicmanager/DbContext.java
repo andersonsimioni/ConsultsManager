@@ -358,9 +358,9 @@ public class DbContext extends SQLiteOpenHelper {
                 query.append("INSERT INTO patient VALUES(NULL,'"+patient.getName()+"','"+(patient.isGrp_blood()?1:0) +"','"+patient.getPhone()+"','"+patient.getFix_phone()+"')");
             else{
                 query.append("UPDATE patient ");
-                query.append("SET name = '" + patient.getName() + "' ");
-                query.append("grp_blood = " + (patient.isGrp_blood()?1:0) + " ");
-                query.append("phone = '" + patient.getPhone() + "' ");
+                query.append("SET name = '" + patient.getName() + "', ");
+                query.append("grp_blood = '" + (patient.isGrp_blood()?1:0) + "', ");
+                query.append("phone = '" + patient.getPhone() + "', ");
                 query.append("fix_phone = '" + patient.getFix_phone() + "' ");
                 query.append("WHERE id = " + patient.getId());
             }
